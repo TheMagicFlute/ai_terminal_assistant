@@ -17,15 +17,9 @@
 ai <Your need>
 ```
 
-Example:
+Examples:
 
 ``` bash
-ai 查看当前目录下所有文件大小
-```
-Result:
-
-
-```
 (ollama) PS D:\ai_terminal> ai 查看当前目录下所有文件大小
 查看当前目录下所有文件大小
 dir /a /s /q
@@ -35,4 +29,12 @@ dir /a /s /q
 
  D:\ai_terminal 的目录
  ...
+```
+
+
+```
+(ollama) PS D:\ai_terminal> ai 根据这个目录创建一个叫abc的docker
+根据这个目录创建一个叫abc的docker
+docker build -t abc .
+复制(c)/ 执行(e)/ 退出(q):
 ```
