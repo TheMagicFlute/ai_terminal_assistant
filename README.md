@@ -8,7 +8,7 @@
 2. Install the requirements
 3. `pyinstaller --onefile --name ai main.py`
 4. Rename the output file to ai.exe
-5. OR YOU CAN JUST DOWNLOAD THE ai.exe FROM [https://github.com/ollama/ai_terminal_assistant/releases](https://github.com/mengqinlol/ai_terminal_assistant/releases)
+5. OR YOU CAN JUST DOWNLOAD THE [ai.exe](https://github.com/mengqinlol/ai_terminal_assistant/releases) FROM release
 6. Add path to the ai.exe to your PATH
 7. First, run `ai` in your terminal for initialization.
 8. Then, follow the instuction given by `ai` to fill in your configration
