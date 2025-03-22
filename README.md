@@ -2,6 +2,12 @@
 
 ### A simple AI terminal command line assistant
 
+#### Features
+
+- **Command Helper** No need to remember all the commands any more. Just ask the AI and it will give you the command.
+- **System Compatibility** AI knows about your system and can provide you the command that you need.
+- **Directory Compatibility** AI knows about your directory and can analyze it.
+
 #### Installation
 
 1. Clone the repository
@@ -39,3 +45,17 @@ Copy(c)/ Execute(e)/ Quit(q):
 docker build -t abc .
 Copy(c)/ Execute(e)/ Quit(q):
 ```
+
+#### TODO
+
+- [x] Add support for Ollama
+- [ ] Add support for more commands
+- [ ] Add support for more languages
+- [ ] Add support for more platforms
+
+#### Thanks
+
+- [Ollama](https://github.com/llama-ai/llama)
+- [Python](https://www.python.org/)
+- [VSCode](https://code.visualstudio.com/)
+- [GitHub](https://github.com/)
