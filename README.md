@@ -7,11 +7,10 @@
 1. Clone the repository
 2. Install the requirements
 3. `pyinstaller --onefile --name ai main.py`
-4. Rename the output file to ai.exe
-5. OR YOU CAN JUST DOWNLOAD THE [ai.exe](https://github.com/mengqinlol/ai_terminal_assistant/releases) FROM release
-6. Add path to the ai.exe to your PATH
-7. First, run `ai` in your terminal for initialization.
-8. Then, follow the instuction given by `ai` to fill in your configration
+4. OR YOU CAN JUST DOWNLOAD THE [ai.exe](https://github.com/mengqinlol/ai_terminal_assistant/releases) FROM release
+5. Add path to the ai.exe to your PATH
+6. First, run `ai` in your terminal for initialization.
+7. Then, follow the instuction given by `ai` to fill in your configration
 
 ##### If you want to use Ollama
 - `base_url` should be `http://127.0.0.1:11434/v1`
