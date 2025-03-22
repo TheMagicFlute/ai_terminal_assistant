@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
     print(ans)
 
-    res = input("复制(c)/ 执行(e)/ 退出(q):")
+    res = input("Copy(c)/ Execute(e)/ Quit(q):")
 
     if res == "c":
         pyperclip.copy(ans)
