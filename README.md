@@ -13,6 +13,12 @@
 7. First, run `ai` in your terminal for initialization.
 8. Then, follow the instuction given by `ai` to fill in your configration
 
+##### If you want to use Ollama
+- `base_url` should be `http://127.0.0.1:11434/v1`
+- 'api_key' is not needed
+- 'model' can be any model you`ve pulled from ollama
+- IT SHOULD BE noted that Ollama may take a long time to process your request if it hasn't received any requests for a while, due to the initialization of the model.
+
 
 #### Usage
 
