@@ -30,12 +30,12 @@ Examples:
 ``` bash
 (ollama) PS D:\ai_terminal> ai 查看当前目录下所有文件大小
 dir /a /s /q
-复制(c)/ 执行(e)/ 退出(q):
+Copy(c)/ Execute(e)/ Quit(q):
 ```
 
 
 ```
 (ollama) PS D:\ai_terminal> ai 根据这个目录创建一个叫abc的docker
 docker build -t abc .
-复制(c)/ 执行(e)/ 退出(q):
+Copy(c)/ Execute(e)/ Quit(q):
 ```
