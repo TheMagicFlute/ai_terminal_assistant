@@ -1,5 +1,1 @@
-{
-    "base_url": "http://localhost:11434/v1",
-    "api_key": "your_api_key",
-    "model": "qwen2.5:14b"
-}
+{"base_url": "http://127.0.0.1:11434/v1", "api_key": "your_api_key", "model": "qwen2.5-coder:14b"}

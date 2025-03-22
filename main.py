@@ -21,9 +21,6 @@ else:
 
 
 if __name__ == "__main__":
-
-    
-
     prompt, res = process_arg(sys.argv)
     if not res:
         print(prompt)
@@ -33,6 +30,7 @@ if __name__ == "__main__":
         base_url=config["base_url"],  # Ollama 本地 API
         api_key=config["api_key"],  # Ollama API Key"  # 这个 key 可以随便填，Ollama 不需要鉴权
     )
+    files = [item for item in os.listdir() if not item.startswith('.')]
     response = client.chat.completions.create(
     model=config["model"],
     messages=[
@@ -44,14 +42,14 @@ if __name__ == "__main__":
         },
         {
             "role": "user",
-            "content": prompt,
+            "content": f'''我现在在{SYS}系统的{TERMINAL} 终端下，我所在的目录是{os.getcwd()}，该目录下有这些文件{files}
+            我想执行 {prompt}''',
         }
     ],
     temperature=0
     )
 
     ans = response.choices[0].message.content
-
     ans = process_response(ans)
 
     print(ans)

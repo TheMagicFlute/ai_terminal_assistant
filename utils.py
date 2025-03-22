@@ -45,3 +45,55 @@ def process_arg(argvs):
     if ".py" in prompt.split(" ")[0] or ".exe" in prompt.split(" ")[0]:
         prompt = " ".join(prompt.split(" ")[1:])
     return prompt, True
+
+def get_all_executable_commands():
+    executables = set()
+    path_dirs = os.environ.get('PATH', '').split(os.pathsep)
+    
+    # 获取系统支持的可执行文件扩展名（Windows 特有）
+    if os.name == 'nt':
+        pathext = os.environ.get('PATHEXT', '.exe;.bat;.cmd').lower().split(';')
+        valid_extensions = {ext.lower() for ext in pathext}
+    else:
+        valid_extensions = None  # 非 Windows 不检查扩展名
+
+    for dir_path in path_dirs:
+        if not os.path.isdir(dir_path):
+            continue
+
+        try:
+            with os.scandir(dir_path) as it:
+                for entry in it:
+                    # 仅处理文件或符号链接（排除目录）
+                    if not (entry.is_file() or entry.is_symlink()):
+                        continue
+
+                    # Windows：检查扩展名是否在 PATHEXT 中
+                    if os.name == 'nt':
+                        _, ext = os.path.splitext(entry.name)
+                        if ext.lower() not in valid_extensions:
+                            continue  # 跳过无效扩展名
+
+                    # 检查文件是否可执行
+                    if os.access(entry.path, os.X_OK):
+                        # 提取命令名称（Windows 去掉扩展名，其他系统保留原名）
+                        if os.name == 'nt':
+                            cmd_name = entry.name
+                            for ext in valid_extensions:
+                                if cmd_name.lower().endswith(ext):
+                                    cmd_name = cmd_name[:-len(ext)] if ext else cmd_name
+                                    break
+                        else:
+                            cmd_name = entry.name
+
+                        executables.add(cmd_name)
+        except PermissionError:
+            continue
+
+    return sorted(executables)
+
+if __name__ == "__main__":
+    # 获取并打印所有可执行命令
+    all_commands = get_all_executable_commands()
+    print("可用命令列表：")
+    print('\n'.join(all_commands))
