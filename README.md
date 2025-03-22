@@ -29,7 +29,7 @@ Examples:
 
 ``` bash
 (ollama) PS D:\ai_terminal> ai 查看当前目录下所有文件大小
-dir /a /s /q
+dir /a-d /o-s
 Copy(c)/ Execute(e)/ Quit(q):
 ```
 
