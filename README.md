@@ -6,10 +6,11 @@
 
 1. Clone the repository
 2. Install the requirements
-3. Fill in your BASE_URL, API_KEY, MODEL in the env.py file (if you`re using ollama, the default BASE_URL is http://localhost:11434/v1, and API_KEY is not nesscary)
-4. Pyinstaller --onefile main.py
-5. Rename the output file to ai.exe
-6. Add ai.exe to your PATH
+3. Pyinstaller --onefile main.py
+4. Rename the output file to ai.exe
+5. Add ai.exe to your PATH
+6. First, run `ai` in your terminal for initialization.
+
 
 #### Usage
 
