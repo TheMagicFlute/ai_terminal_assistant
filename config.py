@@ -5,7 +5,7 @@ from pathlib import Path
 
 class Config:
     def __init__(self):
-        self.config_path = Path(sys.executable).parent + "/config.json"
+        self.config_path = str(Path(sys.executable).parent) + "/config.json"
         if not os.path.exists(self.config_path):
             with open(self.config_path, "w") as f:
                 config = {

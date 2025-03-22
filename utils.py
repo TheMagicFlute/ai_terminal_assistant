@@ -10,10 +10,15 @@ def process_response(ans):
     flag = False
     res = ""
     for line in ans:
+        if '```' in line and not flag:
+            flag = not flag
+            continue
+        elif '```' in line and flag:
+            flag = not flag
+            break
         if flag:
             res += line + "\n"
-        if '```' in line:
-            flag = not flag
+    res = res.strip()
     return res
 
 def process_arg(argvs):

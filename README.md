@@ -6,11 +6,12 @@
 
 1. Clone the repository
 2. Install the requirements
-3. Pyinstaller --onefile main.py
+3. `pyinstaller --onefile --name ai main.py`
 4. Rename the output file to ai.exe
-5. Add ai.exe to your PATH
-6. First, run `ai` in your terminal for initialization.
-7. Then, follow the instuction given by `ai` to fill in your configration
+5. OR YOU CAN JUST DOWNLOAD THE ai.exe FROM https://github.com/ollama/ai_terminal_assistant/releases
+6. Add path to the ai.exe to your PATH
+7. First, run `ai` in your terminal for initialization.
+8. Then, follow the instuction given by `ai` to fill in your configration
 
 
 #### Usage
