@@ -10,6 +10,7 @@
 4. Rename the output file to ai.exe
 5. Add ai.exe to your PATH
 6. First, run `ai` in your terminal for initialization.
+7. Then, follow the instuction given by `ai` to fill in your configration
 
 
 #### Usage
