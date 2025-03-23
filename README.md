@@ -2,6 +2,9 @@
 
 ### A simple AI terminal command line assistant
 
+
+- [Chinese](https://github.com/mengqinlol/ai_terminal_assistant/blob/main/README_CN.md)
+
 #### Features
 
 - **Command Helper** No need to remember all the commands any more. Just ask the AI and it will give you the command.
